@@ -1,0 +1,45 @@
+.inspector
+{
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+
+	> textarea
+	{
+		display: none;
+	}
+
+	> iframe
+	{
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+		border: none;
+	}
+
+	.CodeMirror
+	{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 50%;
+		height: 100% !important;
+
+		.cm-inspector-highlight-line
+		{
+			box-shadow: inset 0 0 2em #EFEFEF;
+		}
+
+		.cm-inspector-highlight
+		{
+			border-bottom: 1px solid red;
+		}
+	}
+}

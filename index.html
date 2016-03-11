@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Inspector</title>
+		<link rel="stylesheet" href="lib/inspector.css" />
+		<link rel="stylesheet" href="codemirror/lib/codemirror.css" />
+		<script type="text/javascript" src="lib/jquery.min.js"></script>
+		<script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
+		<script type="text/javascript" src="codemirror/mode/xml/xml.js"></script>
+		<script type="text/javascript" src="codemirror/mode/javascript/javascript.js"></script>
+		<script type="text/javascript" src="codemirror/mode/css/css.js"></script>
+		<script type="text/javascript" src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+		<script type="text/javascript" src="codemirror/addon/fold/xml-fold.js"></script>
+		<script type="text/javascript" src="codemirror/addon/edit/matchtags.js"></script>
+		<script type="text/javascript" src="lib/inspector.js"></script>
+		<script type="text/javascript">
+			$(function()
+			{
+				window.Debugger = new Inspector(
+				{
+					Content: '<!DOCTYPE html>\n' +
+					'<html>\n' +
+					'	<head>\n' +
+					'		<title>Hello!</title>\n' +
+					'	</head>\n' +
+					'	<body>\n' +
+					'		<div>Sup yo</div>\n' +
+					'		<div>\n' +
+					'			<div>\n' +
+					'				<div>Grandchild</div>\n' +
+					'				<em>Child</em>\n' +
+					'			</div>\n' +
+					'			<div style="width: 10px; height: 10px; background: red;"></div>\n' +
+					'			<div style="width: 10px; height: 10px; background: green;"></div>\n' +
+					'			<div style="width: 10px; height: 10px; background: blue;"></div>\n' +
+					'		</div>\n' +
+					'	</body>\n' +
+					'</html>',
+					Pane: $('.inspector')
+				});
+			});
+		</script>
+	</head>
+	<html>
+		<body>
+			<div class="inspector"></div>
+		</body>
+	</html>
+</html>
