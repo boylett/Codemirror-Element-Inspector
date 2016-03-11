@@ -10,4 +10,4 @@ I will be writing a proper library wrapper very soon.
 ## Changelog
 #### 11th March 2016
 - Initial commit
- - Bi-directional eElement highlighting and selection
+ - Bi-directional element highlighting and selection
